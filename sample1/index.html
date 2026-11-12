@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Satellite</title>
+  <meta name="description" content="Satellite are a four-piece alternative rock band from Manchester. Sample website by Satellite Online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/band.css">
+</head>
+<body>
+  <header class="band-header">
+    <div class="wrap">
+      <a class="small-logo" href="./">SATELLITE</a>
+      <nav aria-label="Main">
+        <ul class="band-nav">
+          <li><a href="./" aria-current="page">Home</a></li>
+          <li><a href="tour/">On tour</a></li>
+          <li><a href="about/">About us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="logo-hero wrap" aria-label="Satellite">
+      <svg class="band-logo" viewBox="0 0 800 280" role="img" aria-labelledby="logo-title">
+        <title id="logo-title">Satellite</title>
+        <g transform="translate(400 118)">
+          <circle class="dish" cx="0" cy="0" r="12"/>
+          <g class="waves">
+            <path d="M -38 -18 A 42 42 0 0 1 38 -18"/>
+            <path d="M -66 -34 A 74 74 0 0 1 66 -34"/>
+            <path d="M -94 -50 A 106 106 0 0 1 94 -50"/>
+          </g>
+        </g>
+        <text x="400" y="260" text-anchor="middle">SATELLITE</text>
+      </svg>
+      <p class="logo-tagline">Alternative rock from Manchester. New album "Long Range" out now.</p>
+    </section>
+
+    <section class="block" aria-labelledby="video-title">
+      <div class="wrap">
+        <h2 id="video-title">Watch</h2>
+        <!-- VIDEO PLACEHOLDER: replace the div below with
+             <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO-ID" title="Satellite – music video" allowfullscreen></iframe></div> -->
+        <div class="video">
+          <div><span class="play" aria-hidden="true"></span>Music video goes here</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="tour-title">
+      <div class="wrap">
+        <h2 id="tour-title">On tour</h2>
+        <ul class="gigs">
+        <li class="gig">
+          <p class="gig-date"><span class="day">27</span> <span class="month">Nov</span><span class="weekday">Friday</span></p>
+          <p class="gig-place"><span class="city">Manchester, UK</span><span class="venue">Deaf Institute</span></p>
+          <div class="gig-actions">
+            <span class="btn" aria-disabled="true">Sold out</span>
+          </div>
+        </li>
+        <li class="gig">
+          <p class="gig-date"><span class="day">28</span> <span class="month">Nov</span><span class="weekday">Saturday</span></p>
+          <p class="gig-place"><span class="city">Leeds, UK</span><span class="venue">Royal Park Cellars</span></p>
+          <div class="gig-actions">
+            <a class="btn" href="#">Tickets</a>
+            <a class="btn ghost" href="#">Last few</a>
+          </div>
+        </li>
+        <li class="gig">
+          <p class="gig-date"><span class="day">4</span> <span class="month">Dec</span><span class="weekday">Friday</span></p>
+          <p class="gig-place"><span class="city">Glasgow, UK</span><span class="venue">Barrowland Ballroom</span></p>
+          <div class="gig-actions">
+            <a class="btn" href="#">Tickets</a>
+          </div>
+        </li>
+        </ul>
+        <p class="more-link"><a class="btn ghost" href="tour/">See all tour dates</a></p>
+      </div>
+    </section>
+
+    <section class="block signup" aria-labelledby="signup-title">
+      <div class="wrap">
+        <h2 id="signup-title">Join the mailing list</h2>
+        <p>New music, tour dates and the odd bit of news. No spam, and you can leave any time.</p>
+        <form class="signup-form" onsubmit="event.preventDefault(); document.getElementById('signup-note').hidden = false;">
+          <label for="signup-email" class="visually-hidden" style="position:absolute;left:-9999px">Email address</label>
+          <input id="signup-email" type="email" placeholder="Your email address" required>
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <p class="signup-note" id="signup-note" hidden>This is a sample site, so sign-up isn't switched on.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="band-footer">
+    <div class="wrap">
+      <a class="small-logo" href="./">SATELLITE</a>
+      <ul class="socials">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Spotify</a></li>
+      </ul>
+      <p class="credit">This is a sample website. Satellite are not a real band. Built by <a href="../">Satellite Online</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* Satellite (sample band site) — night-sky indigo with a sodium-streetlight amber */
+:root {
+  --night: #1E1B45;      /* page background */
+  --deep: #15132F;       /* header, footer, banner */
+  --panel: #2A2660;      /* raised surfaces */
+  --text: #ECEAF7;       /* main text */
+  --soft: #A9A5D1;       /* secondary text */
+  --amber: #F5B841;      /* accent: buttons, dates, logo waves */
+  --rule: #3A3577;       /* dividers */
+
+  --display: "Big Shoulders Display", "Impact", "Arial Narrow", sans-serif;
+  --body: "Karla", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--night); color: var(--text);
+  font-family: var(--body); font-size: 1.1rem; line-height: 1.6;
+}
+a { color: inherit; }
+img, svg { display: block; max-width: 100%; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+.wrap { width: min(100% - 2.5rem, 64rem); margin-inline: auto; }
+
+/* ---------- Header ---------- */
+.band-header { background: var(--deep); }
+.band-header .wrap {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  min-height: 4.5rem; flex-wrap: wrap;
+}
+.small-logo {
+  font-family: var(--display); font-weight: 800; font-size: 1.8rem;
+  letter-spacing: .06em; text-decoration: none;
+}
+.band-nav { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+.band-nav a { text-decoration: none; color: var(--soft); font-weight: 700; padding: .25rem 0; border-bottom: 2px solid transparent; }
+.band-nav a:hover { color: var(--text); }
+.band-nav a[aria-current="page"] { color: var(--text); border-bottom-color: var(--amber); }
+
+/* ---------- Home: logo ---------- */
+.logo-hero { padding: clamp(3rem, 8vw, 6rem) 0 clamp(2.5rem, 6vw, 4rem); text-align: center; }
+.band-logo { width: min(100%, 40rem); margin-inline: auto; height: auto; }
+.band-logo .waves path { fill: none; stroke: var(--amber); stroke-width: 6; stroke-linecap: round; }
+.band-logo .dish { fill: var(--amber); }
+.band-logo text {
+  fill: var(--text); font-family: var(--display); font-weight: 800;
+  font-size: 118px; letter-spacing: 10px;
+}
+
+/* ---------- Sections ---------- */
+.block { padding: clamp(2.5rem, 6vw, 4rem) 0; }
+.block + .block { border-top: 1px solid var(--rule); }
+.block h2 {
+  font-family: var(--display); font-weight: 800; text-transform: uppercase;
+  font-size: clamp(2.2rem, 6vw, 3.5rem); line-height: 1; letter-spacing: .02em; margin: 0 0 1.5rem;
+}
+
+/* ---------- Video placeholder ---------- */
+.video {
+  aspect-ratio: 16 / 9; background: var(--panel); border-radius: .5rem;
+  display: grid; place-items: center; text-align: center; color: var(--soft);
+}
+.video .play {
+  width: 5rem; height: 5rem; border-radius: 50%; background: var(--amber);
+  display: grid; place-items: center; margin: 0 auto .75rem;
+}
+.video .play::after {
+  content: ""; margin-left: .35rem;
+  border-left: 1.6rem solid var(--deep); border-top: 1rem solid transparent; border-bottom: 1rem solid transparent;
+}
+.video iframe { width: 100%; height: 100%; border: 0; border-radius: .5rem; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 700;
+  padding: .7rem 1.3rem; border-radius: .35rem; border: 2px solid var(--amber);
+  background: var(--amber); color: var(--deep); font-family: var(--body); font-size: 1rem; cursor: pointer;
+}
+.btn.ghost { background: transparent; color: var(--amber); }
+.btn:hover { filter: brightness(1.1); }
+.btn[aria-disabled="true"] { border-color: var(--rule); background: transparent; color: var(--soft); cursor: default; filter: none; }
+
+/* ---------- Gig list (shared by home preview and tour page) ---------- */
+.gigs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.gig {
+  display: grid; grid-template-columns: 6.5rem 1fr auto; gap: 1.25rem; align-items: center;
+  padding: 1.25rem 0; border-bottom: 1px solid var(--rule);
+}
+.gig-date { font-family: var(--display); line-height: 1; color: var(--amber); }
+.gig-date .day { display: block; font-size: 2.6rem; font-weight: 800; }
+.gig-date .month { font-size: 1.15rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.gig-date .weekday { display: block; color: var(--soft); font-family: var(--body); font-size: .9rem; margin-top: .3rem; }
+.gig-place .city { display: block; font-weight: 700; font-size: 1.25rem; }
+.gig-place .venue { color: var(--soft); }
+.gig-actions { display: flex; gap: .6rem; flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 640px) {
+  .gig { grid-template-columns: 5rem 1fr; }
+  .gig-actions { grid-column: 1 / -1; justify-content: flex-start; }
+}
+.more-link { margin-top: 1.75rem; }
+
+/* ---------- Tour page ---------- */
+.announce {
+  background: var(--amber); color: var(--deep); text-align: center;
+  font-weight: 700; padding: .75rem 1.25rem;
+}
+.page-title { padding: clamp(2.5rem, 6vw, 4rem) 0 1.5rem; }
+.page-title h1 {
+  font-family: var(--display); font-weight: 800; text-transform: uppercase;
+  font-size: clamp(3rem, 10vw, 6rem); line-height: .95; letter-spacing: .02em; margin: 0;
+}
+.page-title p { color: var(--soft); margin: .75rem 0 0; }
+.tour-wrap { padding-bottom: 4rem; }
+
+/* ---------- Mailing list ---------- */
+.signup p { color: var(--soft); max-width: 50ch; margin: 0 0 1.25rem; }
+.signup-form { display: flex; gap: .75rem; flex-wrap: wrap; max-width: 34rem; }
+.signup-form input {
+  flex: 1 1 16rem; font: inherit; color: var(--text);
+  background: var(--panel); border: 2px solid var(--rule); border-radius: .35rem; padding: .7rem 1rem;
+}
+.signup-form input::placeholder { color: var(--soft); }
+.signup-form input:focus { border-color: var(--amber); outline: none; }
+.signup-note { color: var(--amber) !important; margin-top: 1rem !important; font-weight: 700; }
+
+/* ---------- About page ---------- */
+.story { padding-bottom: 4rem; }
+.story p { max-width: 62ch; }
+.story h2 {
+  font-family: var(--display); font-weight: 800; text-transform: uppercase;
+  font-size: 2rem; letter-spacing: .03em; margin: 2.5rem 0 .5rem; color: var(--amber);
+}
+.band-photo {
+  aspect-ratio: 16 / 9; background: var(--panel); border-radius: .5rem; margin-bottom: 2rem;
+  display: grid; place-items: center; color: var(--soft);
+}
+.lineup { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; max-width: 30rem; }
+.lineup li { display: flex; justify-content: space-between; border-bottom: 1px solid var(--rule); padding: .5rem 0; }
+.lineup span { color: var(--soft); }
+
+/* ---------- Footer ---------- */
+.band-footer { background: var(--deep); padding: 2.5rem 0; color: var(--soft); font-size: 1rem; }
+.band-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; align-items: center; }
+.band-footer .small-logo { color: var(--text); }
+.socials { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.socials a { text-decoration: none; font-weight: 700; color: var(--text); }
+.socials a:hover { color: var(--amber); }
+.credit { width: 100%; margin: 0; font-size: .9rem; }
+.credit a { color: var(--amber); }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }

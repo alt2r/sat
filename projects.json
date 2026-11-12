@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Vain Wild",
+    "description": "Web page containing information and upcoming shows as well as a seperate merch store (merch store not launched by the band yet!)",
+    "url": "https://vainwild.com",
+    "image": "images/projects/vwproj.png"
+  },
+
+  {
+    "title": "Demo multipage website",
+    "description": "Demo website with links to different videos, songs and live events",
+    "url": "/sample1",
+    "image": "images/projects/guitarist silhouuette.webp"
+  }
+]
